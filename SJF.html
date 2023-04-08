@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SRTF Scheduling Algorithm</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+    <div>
+        <h1>SJF Scheduling Algorithm</h1>
+        <p>This page demonstrates the Shortest Job First - Premptive (SJF) scheduling algorithm using JavaScript.</p>
+        <form id = "sjf-form">
+          <label for="process-count">Number of Processes:</label>
+          <input type="number" class= "inout_style" id="process-count" name="process-count" min="1" required>
+          <input type="submit" class= "inout_style" value="Generate Fields">
+        </form>
+        <br>
+        <h3>Process Information</h3>
+        <table id="processes">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Arrival Time</th>
+              <th>Burst Time</th>
+            </tr>
+          </thead>
+          <tbody ></tbody>
+        </table>
+        <button class= "inout_style" id="calculate-btn">Schedule</button>
+        <br>
+        <br>
+        <hr>
+        <h3>Gantt Chart</h3>
+        <table id="gantt-chart" style="border-collapse: collapse;"">
+            <thead>
+                <tr>
+                    <th>Process</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <br><br>
+        <hr>
+        <h3>Results Table</h3>
+        <table id="result-table" style="border-collapse: collapse;"">
+          <thead>
+              <tr>
+                  <th>Process</th>
+                  <th>Arrival Time</th>
+                  <th>Burst Time</th>
+                  <th>Completion Time</th>
+                  <th>Turnaround Time</th>
+                  <th>Waiting Time</th>
+              </tr>
+          </thead>
+          <tbody></tbody>
+          <tfoot>
+              <tr>
+                  <td colspan="5">Average Waiting Time:</td>
+                  <td id="avg-wt"></td>
+              </tr>
+              <tr>
+                <td colspan="5">Average Turnaround Time:</td>
+                  <td id="avg-tat"></td>
+              </tr>
+          </tfoot>
+      </table>
+    </div>
+  <script src="sjf_p.js"></script>
+</main>
+    </body>
+  </html>
